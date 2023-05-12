@@ -1,12 +1,15 @@
-header{
+header#hed {
     background-color: #9243a152;
     text-align: center;
-    }
-    body{
-        background:rgb(43, 43, 43);
-        color: white;
-        text-align: center;
-    }
+}
+
+body {
+    background: rgb(43, 43, 43);
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -20,6 +23,7 @@ button {
     background: #33524f;
     box-shadow: 0 3px 3px black;
 }
+
 button:hover {
     background: #213332;
     margin-top: 3px;
@@ -29,15 +33,4 @@ button:hover {
     font-size: 24px;
     color: #fff;
     text-shadow: 2px 2px #181860
-}
-h2::before, h3::before {
-    content: '･';
-    color: rgba(0, 0, 0, 0);
-    margin-right: 14px;
-    height: 100%;
-    background: #5e1a7e;
-}
-h5{
-    font-size: 130%;
-    padding-left: 20px;
 }
