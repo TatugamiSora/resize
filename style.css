@@ -1,11 +1,17 @@
-body{
-    background-color: rgb(43,43,43);
-    color: white;
-}  
+header{
+    background-color: #9243a152;
+    text-align: center;
+    }
+    body{
+        background:rgb(43, 43, 43);
+        color: white;
+        text-align: center;
+    }
 img {
     max-width: 100%;
     height: auto;
 }
+
 button {
     height: 48px;
     width: 120px;
