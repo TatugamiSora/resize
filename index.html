@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>画像の高画質処理</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="file" id="imageFileInput">
+  <button onclick="processImage()">処理する</button>
+  
+  <div id="result"></div>
+  
+  <script>
+    function processImage() {
+      var input = document.getElementById('imageFileInput');
+      var file = input.files[0];
+      
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var imageData = e.target.result;
+        sendToAPI(imageData);
+      };
+      
+      reader.readAsDataURL(file);
+    }
+    
+    function displayResult(result) {
+  var resultDiv = document.getElementById('result');
+  
+  // 画像要素の作成と設定
+  var img = document.createElement('img');
+  img.src = result;  // resultにはAPIからの応答で得られた画像のURLやデータが入っているとします
+  img.style.maxWidth = '100%';  // 必要に応じて画像の表示サイズを調整
+  
+  // 結果の表示
+  resultDiv.innerHTML = '';  // 一旦結果をクリア
+  resultDiv.appendChild(img);  // 画像要素を結果のコンテナに追加
+}
+  </script>
+</body>
+</html>
